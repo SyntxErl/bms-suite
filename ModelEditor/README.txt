@@ -14,10 +14,18 @@ Object Editor and of the Campaign Editor (their 3D view and texture windows stay
                        Save writes into BMS: BMS must be closed, the old file is copied to Backup first.
   Info                 who uses the model (CT entries), files, every LOD (triangles, DOFs, switches, slots),
                        materials and textures.
-  Open folder...       opens a model folder outside BMS, for example your own model exported with the BMS Blender plugin (Parent.dat, Model_N.bml,
+  Open folder...       opens a model folder outside BMS, for example a Blender export (Parent.dat, Model_N.bml,
                        Materials.mtl, textures): 3D view, DOFs, switches, slots, Check data, Info. You can also drag
                        the folder onto the window. Nothing is copied into BMS; shared textures (e.g. "1909/PilotUS_ALB.dds")
                        and numbered textures are looked for in BMS too. Save in the Parent.dat tab writes in that folder.
+  Export to Blender... converts the model shown, or several model numbers (1052, 917, 1700-1705), to a Blender .blend
+                       for the official BMS Blender plugin (bms-blender-plugin): one collection per LOD (in the plugin's
+                       LOD list), DOFs / switches / slots as the plugin's objects with their numbers and values, meshes
+                       with normals and UVs, materials with their textures (PNG, in nodes the plugin's exporter reads).
+                       Materials.mtl and Parent.dat are copied next to the .blend. Needs Blender 3.6 LTS with the plugin
+                       installed; Blender runs in the background. Switch branches that start off are hidden (Alt+H in
+                       Blender shows them). A switch inside a DOF is written as the same DOF inside the switch (BMS draws
+                       it the same way; the plugin's exporter needs it so). Nothing in BMS is changed.
   Check all models...  checks every model folder and lists the problems; double-click opens the model;
                        Export... writes a tab separated text file.
   Backups...           every file changed by the Model Editor, with Restore.

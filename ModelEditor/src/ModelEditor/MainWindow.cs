@@ -71,6 +71,8 @@ public sealed class MainWindow : Window
         L("   Search"); top.Children.Add(_search);
         L("Show"); top.Children.Add(_cat);
         top.Children.Add(Btn("Open folder…", OpenExternal, "Open a model folder outside BMS (for example a Blender export with Parent.dat, Model_N.bml, Materials.mtl). You can also drag the folder onto the window."));
+        top.Children.Add(Btn("Export to Blender…", () => new BlenderExportWindow(_current, n => _modelNames.GetValueOrDefault(n, "")) { Owner = this }.Show(),
+            "Converts the model shown (or several model numbers) to a Blender .blend for the official BMS Blender plugin: LODs, DOFs, switches, slots, materials and textures"));
         top.Children.Add(Btn("Check all models…", CheckAll, "Checks every model folder (Parent.dat, LOD files, DOF / switch numbers, textures)"));
         top.Children.Add(Btn("Backups…", () =>
         {

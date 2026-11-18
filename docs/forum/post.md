@@ -1,3 +1,5 @@
+![The BMS F-16CM-50 converted to Blender with the BMS Suite](https://raw.githubusercontent.com/Danguard63/BMS-suite/main/docs/forum/f16_blender.jpg)
+
 Hi everyone! 👋
 
 To all the theater builders, campaign makers, 3D artists, skinners and to everyone who just loves tinkering with Falcon BMS: I am really happy to share with you something I have been working on for a long time. It's called the **BMS Suite**, and it is a set of editing tools for **Falcon BMS 4.38**, all in one place, **free and open source**.
@@ -17,6 +19,17 @@ It started because I wanted to build a new theater and kept jumping between a do
 
 ![Objective Studio – airbase in 3D](https://raw.githubusercontent.com/Danguard63/BMS-suite/main/docs/guide/shots/24_os_3d.jpg)
 
+### 🆕 Highlight: export BMS models to Blender
+
+This is the one 3D artists have been asking for since the 3ds Max days. 🎉 The Model Editor now has **Export to Blender…**: pick a model (or a list of model numbers) and you get a ready-to-use **.blend** laid out for the **official BMS Blender plugin**:
+
+* one collection per LOD, already in the plugin's LOD list;
+* DOFs, switches and slots as the plugin's objects, with their numbers, limits, multipliers and branches;
+* meshes with normals and UVs, PBR materials with albedo, ARMW, normal and emissive textures;
+* works with buildings, aircraft, vehicles, ships and weapons, old numbered-texture models included.
+
+Edit it in Blender and export it back with *File → Export → F4-BMS (.bml)*. The picture at the top of this post is the stock F-16CM-50 converted this way and rendered in Blender. 🙂
+
 ![Model Editor – DirectX view](https://raw.githubusercontent.com/Danguard63/BMS-suite/main/docs/guide/shots/50_me_3d.jpg)
 
 ![Campaign Editor – theater map](https://raw.githubusercontent.com/Danguard63/BMS-suite/main/docs/guide/shots/41_ce_main.jpg)
@@ -30,7 +43,7 @@ The KTO and BMS's shared files are never touched. Every change goes through a pl
 ### 📥 Download
 
 * **Latest release:** [github.com/Danguard63/BMS-suite/releases/latest](https://github.com/Danguard63/BMS-suite/releases/latest). Download `BMSSuite-x.y.z.zip`, unzip it in a folder you can write to (for example `C:\BMS Suite`) and start `BMSSuite.exe`.
-* **Requirements:** Windows 10/11 x64 and the free [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
+* **Requirements:** Windows 10/11 x64 and the free [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0). For the Blender export: Blender 3.6 LTS with the official BMS Blender plugin.
 * **User guide (PDF, with screenshots):** inside the zip, or [here](https://github.com/Danguard63/BMS-suite/blob/main/docs/BMS-Suite-User-Guide.pdf).
 * **Source code:** [github.com/Danguard63/BMS-suite](https://github.com/Danguard63/BMS-suite), GPL-3.0 license.
 
